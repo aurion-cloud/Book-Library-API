@@ -50,12 +50,12 @@ def update_book(books_id):
 
     if books_id in book:
         book[books_id] = req
-    res = make_response(jsonify({"message": "Book replaced"}), 200)
+        res = make_response(jsonify({"message": "Book replaced"}), 200)
         return res
 
-    book[books_id] = req
-    res = make_response(jsonify({"message": "Book created"}), 201)
-    return res
+        book[books_id] = req
+        res = make_response(jsonify({"message": "Book created"}), 201)
+        return res
 
 if __name__ == "__main__": 
     app.run(host="127.0.0.1") #ip address of my machine
